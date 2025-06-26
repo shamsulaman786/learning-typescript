@@ -9,20 +9,20 @@ interface Address {
 interface Contact {
     id: number;
     name: string;
-    status: ContactStatus;
+    status: Contact;
     address: Address;
 }
 
 interface ContactEvent {
-    contactId: number;
+    contactId: Contact["id"];
 }
 
 interface ContactDeletedEvent extends ContactEvent { 
 }
 
 interface ContactStatusChangedEvent extends ContactEvent { 
-    oldStatus: ContactStatus;
-    newStatus: ContactStatus;
+    oldStatus: Contact["status"];
+    newStatus: Contact["status"];
 }
 
 interface ContactEvents {

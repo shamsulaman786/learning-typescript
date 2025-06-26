@@ -32,3 +32,5 @@ function toContact(nameOrContact) {
         }
     }
 }
+let todoItem = {min: 1, max: 2};
+function save(todo : typeof todoItem) {}
