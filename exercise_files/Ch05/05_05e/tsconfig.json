@@ -3,7 +3,8 @@
         "target": "esnext",
         "noEmit": true,
         "experimentalDecorators": true,
-        "emitDecoratorMetadata": true
+        "emitDecoratorMetadata": true,
+        "outDir": "dist",
     },
     "include": ["src/**/*"]
 }

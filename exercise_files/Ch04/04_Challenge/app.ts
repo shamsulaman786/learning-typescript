@@ -1,6 +1,23 @@
+interface Contact {
+    id: number;
+    name: string;
+    age: number;
+}
+
+interface Query<TProp> {
+    sort?: 'asc' | 'desc';
+    matches(value: TProp): boolean;
+}
+
+type ContactQuery = {
+    [TProp in keyof Contact]?: Query<Contact[TProp]>
+}
+
 function query<T>(
     items: T[],
-    query: any // <--- replace this!
+    query: {
+        [TProp in keyof T]?:(val: T[TProp])=>boolean
+    } // <--- replace this!
 ) {
     return items.filter(item => {
         // iterate through each of the item's properties

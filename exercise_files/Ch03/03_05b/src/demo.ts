@@ -1,3 +1,6 @@
+/**
+ * @fileoverview Defining dynamic but limited types with Records.
+ */
 let x : Record<string,string|number|boolean>= { name: "Wruce Bayne" };
 x.id = 1234;
 x.age = 45;

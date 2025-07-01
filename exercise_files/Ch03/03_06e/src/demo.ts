@@ -1,3 +1,7 @@
+/**
+ * @fileoverview Resource management with the `using` keyword.
+ */
+
 // This file is not properly complied due to an error in 'using' statement.
 class TempData {
     private filePath: string;

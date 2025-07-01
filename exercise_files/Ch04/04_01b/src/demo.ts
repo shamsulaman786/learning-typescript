@@ -1,3 +1,7 @@
+/**
+ * @fileoverview Extending andd modifying existing types.
+ */
+
 let x: Record<string, string | number | boolean | Function> = { name: "Wruce Bayne" }
 x.number = 1234
 x.active = true
@@ -19,6 +23,7 @@ interface Contact {
     name: string;
     status: ContactStatus;
     address: Address;
+    email: string;
 }
 
 interface Query {
@@ -26,7 +31,25 @@ interface Query {
     matches(val): boolean;
 }
 
-type ContactQuery = Record<keyof Contact, Query>
+type ContactQuery = 
+    Partial<
+        Pick<
+            Record<keyof Contact, Query>
+            ,
+            "id" | "name"
+        >
+    >
+
+// using omit keyword
+type ContactQuery2 = 
+    Partial<
+        Omit<
+            Record<keyof Contact, Query>
+            ,
+            "status" | "address" | "email"
+        >
+    >
+type RequiredContactQuery = Required<ContactQuery>
 
 function searchContacts(contacts: Contact[], query: ContactQuery) {
     return contacts.filter(contact => {

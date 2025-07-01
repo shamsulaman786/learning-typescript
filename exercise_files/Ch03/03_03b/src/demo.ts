@@ -1,3 +1,6 @@
+/**
+ * @fileoverview typeof operator.
+ */
 const x = "string"
 const y = true
 console.log(typeof x) // --> "string"

@@ -1,3 +1,6 @@
+/**
+ * @fileoverview keyof operator and generics.
+ */
 type ContactName = string;
 type ContactStatus = "active" | "inactive" | "new"
 type ContactBirthDate = Date | number | string

@@ -89,3 +89,6 @@ class ContactRepository {
         }
     }
 }
+
+const contactRepo: ContactRepository = new ContactRepository();
+contactRepo.save({ id: 1 });

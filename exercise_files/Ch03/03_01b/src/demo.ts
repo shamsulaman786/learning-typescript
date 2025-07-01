@@ -1,3 +1,6 @@
+/**
+ * @fileoverview Combining multiple types with union type "|".
+ */
 type ContactName = string;
 
 // enum ContactStatus {

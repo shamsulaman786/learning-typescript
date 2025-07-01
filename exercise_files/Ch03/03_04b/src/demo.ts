@@ -1,3 +1,6 @@
+/**
+ * @fileoverview Indexed access types.
+ */
 type ContactStatus = "active" | "inactive" | "new";
 
 interface Address {

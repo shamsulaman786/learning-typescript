@@ -1,3 +1,6 @@
+/**
+ * @fileoverview Demonstrating the use of a temporary data file.
+ */
 class TempData {
     private filePath: string;
 
